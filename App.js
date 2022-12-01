@@ -61,8 +61,6 @@ const App: () => Node = () => {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
-  console.log('sadas');
-
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
