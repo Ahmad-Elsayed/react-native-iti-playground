@@ -1,116 +1,108 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React from 'react';
-import type { Node } from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import { SafeAreaView, Text, View, StyleSheet } from 'react-native';
+import Button from './components/button';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+// function App() {
+//   return <View />;
+// }
 
-/* $FlowFixMe[missing-local-annot] The type annotation(s) required by Flow's
- * LTI update could not be added via codemod */
-const Section = ({ children, title }): Node => {
-  const isDarkMode = useColorScheme() === 'dark';
+// export default App;
+
+// const safeAreaViewContainerStyle = {
+//   backgroundColor: 'blue',
+//   flex: 1,
+// };
+
+// const obj = {
+//   address: {
+//     houseNumber: 5,
+//   },
+// };
+
+// obj.address.houseNumber
+
+const App = () => {
   return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
+    <SafeAreaView
+      style={
+        //     {
+        //     backgroundColor: 'magenta',
+        //     flex: 1,
+        //     //   flexDirection: 'row'
+        //     // alignItems: 'center',
+        //     // justifyContent: 'center',
+        //   }
+        // safeAreaViewContainerStyle
+        styles.containerStyle
+      }>
+      {/* <View
+        style={{
+          // display: 'flex'
+          backgroundColor: 'red',
+          //   'background-color'
+          //   flex: 1,
+          height: 200,
 
-const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
+          //   height: 200,
+          //   height: '50%',
+        }}>
+        <Text> styling exceercise </Text>
+      </View> */}
+      {/* <View style={{ flex: 2 }}>
+        <Text>Orange</Text>
+      </View>
+      <View style={{ backgroundColor: '#268bd2', flex: 2 }}>
+        <Text>Orange</Text>
+      </View> */}
+      <View
+        style={{
+          height: 500,
+          width: 500,
+          backgroundColor: 'yellow',
+          //   zIndex: 10,
+        }}>
         <View
           style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
+            position: 'absolute',
+            width: 50,
+            height: 50,
+            backgroundColor: 'gray',
+            bottom: 0,
+          }}
+        />
+      </View>
+      <View
+        style={
+          //   {
+          //   height: 100,
+          //   width: 100,
+          //   backgroundColor: 'green',
+          //   position: 'absolute',
+          //   top: 100,
+          //   left: 75,
+          //   zIndex: 15,
+          //   }
+          styles.greenBoxStyle
+        }
+      />
+      <Button />
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  containerStyle: {
+    flex: 1,
+    color: 'green',
+    padding: 10,
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+  greenBoxStyle: {
+    height: 100,
+    width: 100,
+    backgroundColor: 'green',
+    position: 'absolute',
+    top: 100,
+    left: 75,
   },
 });
 
